@@ -13,5 +13,5 @@ RUN mkdir /build && cd /build \
  && ninja install \
  && rm -rf /build
 FROM build as final
-RUN apk add rust python3
+RUN apk add rust python3 git
 COPY --from=build /usr/local/ /usr/local/
