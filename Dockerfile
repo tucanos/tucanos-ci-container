@@ -13,5 +13,5 @@ RUN mkdir /build && cd /build \
  && ninja install \
  && rm -rf /build
 FROM build as final
-RUN apk add cargo python3 git clang-dev lapack-dev
+RUN apk add python3 git clang-dev lapack-dev
 COPY --from=build /usr/local/ /usr/local/
