@@ -7,7 +7,7 @@ RUN mkdir /build && cd /build \
  && ninja install \
  && rm -rf /build
 RUN mkdir /build && cd /build \
- && curl -Ls https://github.com/LoicMarechal/libOL/archive/refs/tags/v1.70.tar.gz | tar xz \
+ && curl -Ls https://github.com/LoicMarechal/libOL/archive/976b9b2.tar.gz | tar xz \
  && cd libOL* \
  && cmake -G Ninja -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON -DCMAKE_INSTALL_PREFIX=/usr/local \
  && ninja install \
